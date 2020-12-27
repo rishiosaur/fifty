@@ -44,7 +44,7 @@ receiver.router.post('/hn', jsonParser, async (req, res) => {
 		}
 	`
 
-	const { transaction } = await request('http://localhost:3000', query, {
+	const { transaction } = await request(process.env.API_URL, query, {
 		payment: id,
 	})
 
